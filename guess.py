@@ -1,5 +1,6 @@
 import random
 #grah = random.randint(1,10)
+#scrap "pool"
 #replace all instances of bot with grah
 pool = [1,2,3,4,5,6,7,8,9,10]
 b1 = min(pool)
@@ -12,7 +13,7 @@ while bot != choice:
     choice = int(input("guess?:"))
     if choice != bot:
         print("try again")
-    if choice < bot:
+    elif choice < bot:
         history.append(choice)
         print(f"{choice} is less than the number")
         print(f"you have already used {set(history)}")
@@ -20,7 +21,7 @@ while bot != choice:
         history.append(choice)
         print(f"{choice} is greater than the number")
         print(f"you have already used {set(history)}")
-    if choice == bot:
+    elif choice == bot:
         history.append(choice)
         tah = len(history)
         print(f"{choice} is correct. Only took you {tah} attempts")
