@@ -10,13 +10,16 @@ print(f" I'm thinking of a number between {b1} and {b2}, what is it?:")
 choice = 0
 while bot != choice:
     choice = int(input("guess?:"))
-    print("try again:")
+    if choice != bot:
+        print("try again")
     if choice < bot:
         history.append(choice)
         print(f"{choice} is less than the number")
+        print(f"you have already used {set(history)}")
     elif choice > bot:
         history.append(choice)
         print(f"{choice} is greater than the number")
+        print(f"you have already used {set(history)}")
     if choice == bot:
         history.append(choice)
         tah = len(history)
