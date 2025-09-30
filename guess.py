@@ -13,19 +13,19 @@ while bot != choice:
     choice = int(input("guess?:"))
     if choice != bot:
         print("try again")
-    elif choice < bot:
-        history.append(choice)
-        print(f"{choice} is less than the number")
-        print(f"you have already used {set(history)}")
+    if choice < bot:
+            history.append(choice)
+            print(f"{choice} is less than the number")
+            print(f"you have already used {set(history)}")
     elif choice > bot:
-        history.append(choice)
-        print(f"{choice} is greater than the number")
-        print(f"you have already used {set(history)}")
+            history.append(choice)
+            print(f"{choice} is greater than the number")
+            print(f"you have already used {set(history)}")
     elif choice == bot:
-        history.append(choice)
-        tah = len(history)
-        print(f"{choice} is correct. Only took you {tah} attempts")
-        print(history)
+            history.append(choice)
+            tah = len(history)
+            print(f"{choice} is correct. Only took you {tah} attempts")
+            print(history)
 
 
 """ #challenge 1 
