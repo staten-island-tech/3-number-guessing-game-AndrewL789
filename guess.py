@@ -1,12 +1,8 @@
 import random
-#grah = random.randint(1,10)
-#scrap "pool"
-#replace all instances of bot with grah
-pool = [1,2,3,4,5,6,7,8,9,10]
-b1 = min(pool)
-b2 = max(pool)
+b1 = 1
+b2 = 10
 history = [] 
-bot = int(random.choice(pool))
+bot = random.randint(b1,b2) 
 print(f" I'm thinking of a number between {b1} and {b2}, what is it?:")
 choice = 0
 while bot != choice:
